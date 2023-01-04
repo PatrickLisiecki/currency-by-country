@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import './App.css';
 
-type Currency = {
-  name: string,
-  symbol: string,
-}
-
 function App() {
   const [countryName, setCountryName] = useState("");
-  const [currency, setCurrency] = useState<Currency>({name: "", symbol: ""});
+  const [countryData, setCountryData] = useState([]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    fetch(`https://restcountries.com/v3/name/poland`)
-    .then((response => response.json()))
+    fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+    .then((response) => response.json())
+    .then(setCountryData)
+
+    setCountryName("");
   }
+
+  
 
   return (
     <div className="App">
@@ -28,6 +28,15 @@ function App() {
         />
         <button className="search-button">Search</button>
       </form>
+      <ul>
+        {countryData.map((country) => (
+          <>
+            <li>{country["currencies"]["PEN"]["name"]}</li>
+            <li>{country["currencies"]["PEN"]["symbol"]}</li>
+          </>
+        ))}
+       </ul>
+      
     </div>
   )
 }
