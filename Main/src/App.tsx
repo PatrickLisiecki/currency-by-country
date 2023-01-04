@@ -3,18 +3,16 @@ import './App.css';
 
 function App() {
   const [countryName, setCountryName] = useState("");
-  const [countryData, setCountryData] = useState([]);
+  const [countryData, setCountryData] = useState<any[]>([]);
+  //const [currencyData, setCurrencyData] = useState([]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     fetch(`https://restcountries.com/v3.1/name/${countryName}`)
     .then((response) => response.json())
     .then(setCountryData)
-
-    setCountryName("");
+    .then(() => setCountryName(""))
   }
-
-  
 
   return (
     <div className="App">
@@ -31,8 +29,8 @@ function App() {
       <ul>
         {countryData.map((country) => (
           <>
-            <li>{country["currencies"]["PEN"]["name"]}</li>
-            <li>{country["currencies"]["PEN"]["symbol"]}</li>
+            <li>{country.currencies ? Object.values(country.currencies)[0].name : "-"}</li>
+            <li>{country.currencies ? Object.values(country.currencies)[0].symbol : "-"}</li>
           </>
         ))}
        </ul>
