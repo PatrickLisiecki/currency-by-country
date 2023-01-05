@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+.flag-image-container {
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
