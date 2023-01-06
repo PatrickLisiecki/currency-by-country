@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import './App.css'
-import  CountryForm  from './components/CountryFrom'
+import  CountryForm  from './components/CountryForm'
 
 function App() {
-  //const [currencyData, setCurrencyData] = useState([]);
-
-  
   return (
     <div className="App">
       <CountryForm />
