@@ -7,16 +7,16 @@
   align-items: center;
 }
 
-header {
+.header-container {
   text-align: center;
 }
 
-.header-section h1 {
+.header-container h1 {
   font-size: 56px;
   margin-top: 3rem;
 }
 
-.header-section span {
+.header-container span {
   color: rgb(105, 252, 105);
 }
 
@@ -26,15 +26,12 @@ header {
   justify-content: center;
 }
 
-.form-container label {
-}
-
 .search-text {
   height: 25px;
   width: 250px;
   border: 1px solid #666;
   margin-left: 10px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .search-button {
@@ -55,8 +52,4 @@ header {
   align-items: center;
   justify-content: center;
   background-color: #666;
-}
-
-.country-container span {
-  
 }
