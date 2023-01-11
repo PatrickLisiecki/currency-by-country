@@ -16,6 +16,10 @@ function CountryForm() {
             setIsLoading(false)
             setCountryName("")
         })
+        .catch((error) => {
+            alert(error)
+            setIsLoading(false)
+        })
     }
 
     return (
@@ -41,12 +45,12 @@ function CountryForm() {
                 </form>
             </div>
             <div className="country-container">
-                {countryData.map((country) => (
+                {countryData.map((country, index) => (
                     <>
-                        <p>{country.name.common}</p>
-                        <div className="flag-image-container"><img src={country.flags ? country.flags.png : ""}/></div>
-                        <span>Currency Name: {country.currencies ? Object.values(country.currencies)[0].name : "-"}</span>
-                        <span>Symbol: {country.currencies ? Object.values(country.currencies)[0].symbol : "-"}</span>
+                        <p key={index}>{country.name.common}</p>
+                        <div key={index} className="flag-image-container"><img src={country.flags ? country.flags.png : ""}/></div>
+                        <span key={index}>Currency Name: {country.currencies ? Object.values(country.currencies)[0].name : "-"}</span>
+                        <span key={index}>Symbol: {country.currencies ? Object.values(country.currencies)[0].symbol : "-"}</span>
                     </>
                 ))}
             </div>
