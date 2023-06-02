@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 50%;
+    min-height: 500px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    color: #aaa;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.header-container h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.header-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header-container span {
+    color: #aaff00;
+}
+
+.form-container {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+}
+
+form {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 50%;
+    height: 60px;
+    padding: 10px;
+    margin: 2px 0;
+    background: none;
+    border: 2px solid #aaa;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background-color: #eee;
+}
+
+.search-button {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    background-color: white;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.search-button img {
+    width: 25px;
+    height: 25px;
+}
+
+.country-container {
+    display: hidden;
+}
+
+.country-container.active {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.country-container .left-side {
+    width: 40%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.country-container .right-side {
+    width: 50%;
+    height: 100%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.country-container .right-side h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.country-container .right-side span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.country-container .right-side .inner-span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.country-container .left-side img {
+    max-width: 90%;
+    height: auto;
+    margin-left: 10px;
+}

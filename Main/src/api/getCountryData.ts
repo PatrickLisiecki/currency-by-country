@@ -1,4 +1,4 @@
-const API_URL = `https://restcountries.com/v3.1`
+const API_URL = `https://restcountries.com/v3.1`;
 
 function getStatus(res: Response) {
     if (!res.ok) {
@@ -8,12 +8,11 @@ function getStatus(res: Response) {
 }
 
 export const getCountryData = (name: string) => {
-    return fetch(`${API_URL}/name/${name}`)
-    .then(getStatus)
+    return fetch(`${API_URL}/name/${name}`).then(getStatus);
     // .then((response) => {
     //     if (response.ok) {
     //         return response.json();
     //     }
     //     throw new Error("Fetch Request Failed");
     // })
-}
+};
